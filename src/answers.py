@@ -2,6 +2,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+#rd1_question_9
 def rd1_question_9(df):
     df_grouped = df[["id", "seller_type"]].groupby("seller_type")
 
@@ -24,6 +25,7 @@ def rd1_question_9(df):
 
     return None
 
+#rd1_question_13
 def rd1_question_13(df):
     df_grouped = (
         df.groupby("owner")
@@ -47,6 +49,7 @@ def rd1_question_13(df):
 
     return None
 
+#rd1_question_14
 def rd1_question_14(df):
     st.text("As we can see, bikes with high kilometer have cheapier prices")
 
