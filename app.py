@@ -1,16 +1,20 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
+from src.extraction import load_data
+import src.answers as asw
 
 def load_data():
     return pd.read_csv('data/processed/bikes_completed.csv')
 
 def main():
-    df_raw = load_data()
+    df = load_data()
     
-    create_dataframe_section(df_raw)
+    create_dataframe_section(df)
 
-    st.dataframe(df_raw)
+    create_answers_section(df)
+
+    return None
 
 if __name__ == '__main__':
     main()
@@ -49,8 +53,8 @@ def create_dataframe_section(df):
 
 def create_answers_section(df):
     st.title("Main Questions Answers")
-
     st.header("First Round")
+
     st.subheader("How many bikes are being sold by their owners and how many bikes are being sold by distributors?")
 
     st.subheader("How many bikes are being sold are bikes from a unique owner?")
