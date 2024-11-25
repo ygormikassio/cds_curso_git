@@ -54,7 +54,6 @@ def create_dataframe_section(df):
 def create_answers_section(df):
     st.title("Main Questions Answers")
     st.header("First Round")
-
     st.subheader("How many bikes are being sold by their owners and how many bikes are being sold by distributors?")
 
     st.subheader("How many bikes are being sold are bikes from a unique owner?")
@@ -68,9 +67,7 @@ def create_answers_section(df):
     st.subheader("Which company has the most bikes registered?")
 
     st.subheader("Which company has the most expensive bikes on avarege?")
-
     st.subheader("Are the company that has the most expensive bikes registered also the company with the most bikes registered?")
-
     st.subheader("Which bikes are good for buying?")
     
     return None
