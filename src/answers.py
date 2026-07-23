@@ -23,7 +23,7 @@ def rd1_question_9(df):
 
     fig.update_traces(textposition="outside")
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig)
 
     return None
 
@@ -47,7 +47,7 @@ def rd1_question_13(df):
 
     fig.update_traces(textposition="outside")
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig)
 
     return None
 
@@ -62,7 +62,7 @@ def rd1_question_14(df):
         labels={"km_driven": "Kilometers", "selling_price": "Selling Price"},
     )
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig)
 
     return None
 
@@ -92,7 +92,7 @@ def rd2_question_1(df):
 
     fig.update_traces(texttemplate="$ %{text:.2f}", textposition="inside")
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig)
 
     return None
 
@@ -115,7 +115,7 @@ def rd2_question_2(df):
 
     fig.update_traces(texttemplate="%{text:.2f} Km", textposition="inside")
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig)
 
     return None
 
@@ -138,7 +138,7 @@ def rd2_question_3(df):
 
     fig.update_traces(texttemplate="%{text:.0f} Years", textposition="inside")
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig)
 
     return None
 
@@ -161,7 +161,7 @@ def rd2_question_7(df):
 
     fig.update_xaxes(tickangle=-80)
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig)
 
     return None
 
@@ -194,7 +194,7 @@ def rd3_question_2(df):
 
     fig.update_xaxes(tickangle=-80)
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig)
 
     return None
 
@@ -224,7 +224,7 @@ def rd3_question_5(df):
 
     fig.update_xaxes(tickangle=-80)
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig)
 
     return None
 
