@@ -275,3 +275,18 @@ def to_excel(df):
     processed_data = output.getvalue()
 
     return processed_data
+
+
+# ---------------------------------------------------------------------------
+# Ponto de entrada
+#
+# O deploy no Streamlit Cloud está apontado para este arquivo, mas o layout do
+# dashboard vive em app.py, na raiz do projeto. O bloco abaixo delega a execução
+# para lá, de modo que rodar `streamlit run src/answers.py` ou
+# `streamlit run app.py` produza exatamente a mesma tela.
+# ---------------------------------------------------------------------------
+if __name__ == "__main__":
+    import runpy
+    from pathlib import Path
+
+    runpy.run_path(str(Path(__file__).resolve().parent.parent / "app.py"), run_name="__main__")
