@@ -286,7 +286,16 @@ def to_excel(df):
 # `streamlit run app.py` produza exatamente a mesma tela.
 # ---------------------------------------------------------------------------
 if __name__ == "__main__":
+    import os
     import runpy
+    import sys
     from pathlib import Path
 
-    runpy.run_path(str(Path(__file__).resolve().parent.parent / "app.py"), run_name="__main__")
+    # A raiz do projeto precisa estar no sys.path para que `import src.answers`
+    # funcione, e ser o diretorio de trabalho para que os caminhos relativos
+    # de data/ resolvam corretamente.
+    root = Path(__file__).resolve().parent.parent
+    sys.path.insert(0, str(root))
+    os.chdir(root)
+
+    runpy.run_path(str(root / "app.py"), run_name="__main__")
